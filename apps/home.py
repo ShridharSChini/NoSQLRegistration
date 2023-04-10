@@ -13,12 +13,12 @@ from PIL import Image
 import os
 
 def connectToDB(data):
-    # st.write('writing to db')
+    st.write('writing to database')
     csv_path = Path(__file__).parent.parent / "students.csv"
     with open(csv_path, 'a',newline='') as file:
         writer = csv.writer(file)
         writer.writerow(data)
-        # st.write('wrote to db')
+        st.write('compleated')
         file.close()
 
 def create_download_link(val, filename):
